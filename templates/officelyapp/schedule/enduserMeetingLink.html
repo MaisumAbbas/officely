@@ -1,0 +1,269 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>Enduser Meeting Link | Schedule | Officely</title>
+            <style>
+                .app-sidebar-menu-button
+                {
+                    display:none;
+                }
+            </style>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>Enduser Meeting Link</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">Schedule</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">Enduser Meeting Link</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5><b>Enduser</b></h5>
+                                                <input type="text" class="form-control" value="www.officely.ai/signatureLink/example" />
+                    
+                                            </div>
+                                            <div class="col-12 mt-4"></div>
+                                            <div class="col-md-6">
+                                                <p>Template Meeting Name</p>
+                                                <input type="text" class="form-control" placeholder="New user template example :" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Template Meeting Name</p>
+                                                <input type="text" class="form-control" placeholder="Frontal Meeting  :" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Location</p>
+                                                <input type="text" class="form-control" placeholder="Tel Aviv , Israel. :" />
+                                            </div>
+                                            <div class="col-12"></div>
+                                            <div class="col-md-3"></div>
+                                            <div class="col-md-6 mt-4 app-content">
+                                                <div class="card app-content-body">
+                                                    <div class="card-body">
+                                                        <a href="#" class="app-sidebar-menu-button btn btn-outline-light mb-3">
+                                                            <i data-feather="menu"></i>
+                                                        </a>
+                                                        <p>Select Date & Time</p>
+                                                        <div id="calendar-demo"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2  mt-4 text-center pt-4">
+                                                <button class="btn btn-outline-primary btn-block mt-4">7:00 AM</button>
+                                                <button class="btn btn-outline-primary btn-block">8:00 AM</button>
+                                                <button class="btn btn-outline-primary btn-block">9:00 AM</button>
+                                                <button class="btn btn-outline-primary btn-block">10:00 AM</button>
+                                                <button class="btn btn-outline-primary btn-block">11:00 AM</button>
+                                                <button class="btn btn-outline-primary btn-block">12:00 AM</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-outline-primary btn-rounded" style="float:right;"><i class="fa fa-save mr-2"></i>Save</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- begin::Create Event Modal -->
+                    <div class="modal fade" id="createEventModal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Create Event</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class="ti-close"></i>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form autocomplete="off">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Title</label>
+                                            <div class="col-sm-9">
+                                                <input id="event-title" type="text" class="form-control" placeholder="Title">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Event type</label>
+                                            <div class="col-sm-9">
+                                                <div class="mt-2" id="event-type">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label"
+                                                               for="customRadioInline1">Appointment</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline2">Meeting</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row row-sm">
+                                            <label class="col-sm-3 col-form-label">Start</label>
+                                            <div class="col-sm-5">
+                                                <input id="event-start-date" type="text"
+                                                       class="form-control create-event-datepicker"
+                                                       placeholder="Date">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input id="event-start-time" type="text" class="form-control create-event-demo"
+                                                       placeholder="Time">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row row-sm">
+                                            <label class="col-sm-3 col-form-label">End</label>
+                                            <div class="col-sm-5">
+                                                <input id="event-end-date" type="text" class="form-control create-event-datepicker"
+                                                       placeholder="Date">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input id="event-end-time" type="text" class="form-control create-event-demo"
+                                                       placeholder="Time">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Participate</label>
+                                            <div class="col-sm-9">
+                                                <div class="avatar-group">
+                                                    <figure class="avatar avatar-sm">
+                                                        <span class="avatar-title bg-success rounded-circle">K</span>
+                                                    </figure>
+                                                    <figure class="avatar avatar-sm">
+                                                        <span class="avatar-title bg-danger rounded-circle">S</span>
+                                                    </figure>
+                                                    <figure class="avatar avatar-sm">
+                                                        <span class="avatar-title bg-primary rounded-circle">C</span>
+                                                    </figure>
+                                                    <figure class="avatar avatar-sm">
+                                                        <img src="~/Content/assets/media/image/user/women_avatar3.jpg" class="rounded-circle"
+                                                             alt="image">
+                                                    </figure>
+                                                </div>
+                                                <button type="button" class="btn btn-outline-light btn-sm btn-floating">
+                                                    <i class="ti-plus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Description</label>
+                                            <div class="col-sm-9">
+                                                <textarea id="event-desc" class="form-control" rows="6"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3"></label>
+                                            <div class="col-sm-9">
+                                                <button type="submit" id="btn-save" class="btn btn-primary">Create</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end::Create Event Modal -->
+                    <!-- begin::Event Info Modal -->
+                    <div class="modal fade" id="viewEventModal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">
+                                        <span class="event-icon mr-2"></span>
+                                        <span class="event-title">Modal Title</span>
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class="ti-close"></i>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="event-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end::Event Info Modal -->
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+            <script>
+                setTimeout(function () {
+                    $('.fc-right').addClass("d-none");
+                    $('.fc-left').addClass("fc-right");
+                    $('.fc-left').removeClass("fc-left");
+                    $('.fc-center').addClass("fc-lift");
+                    $('.fc-center').removeClass("fc-center");
+                    $('.fc-today-button').addClass("d-none");
+                }, 800);
+            
+                $(function () {
+                    $(document).on('click', '.app-block .app-content .app-action .action-left input[type="checkbox"]', function () {
+                        $('.app-lists ul li input[type="checkbox"]').prop('checked', $(this).prop('checked'));
+                        if ($(this).prop('checked')) {
+                            $('.app-lists ul li input[type="checkbox"]').closest('li').addClass('active');
+                        } else {
+                            $('.app-lists ul li input[type="checkbox"]').closest('li').removeClass('active');
+                        }
+                    });
+            
+                    $(document).on('click', '.app-lists ul li input[type="checkbox"]', function () {
+                        if ($(this).prop('checked')) {
+                            $(this).closest('li').addClass('active');
+                        } else {
+                            $(this).closest('li').removeClass('active');
+                        }
+                    });
+            
+                    $(document).on('click', '.app-block .app-content .app-content-body .app-lists ul.list-group li.list-group-item', function (e) {
+                        if (!$(e.target).is('.custom-control, .custom-control *, a, a *')) {
+                            $('.app-detail').addClass('show').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
+                                $('.app-block .app-content .app-content-body .app-detail .app-detail-article').niceScroll().resize();
+                            });
+                        }
+                    });
+            
+                    $(document).on('click', 'a.app-detail-close-button', function () {
+                        $('.app-detail').removeClass('show');
+                        return false;
+                    });
+            
+                    $(document).on('click', '.app-sidebar-menu-button', function () {
+                        $('.app-block .app-sidebar, .app-content-overlay').addClass('show');
+                        // $('.app-block .app-sidebar .app-sidebar-menu').niceScroll().resize();
+                        return false;
+                    });
+            
+                    $(document).on('click', '.app-content-overlay', function () {
+                        $('.app-block .app-sidebar, .app-content-overlay').removeClass('show');
+                        return false;
+                    });
+                });
+            </script>
+        </body>
+    </html>

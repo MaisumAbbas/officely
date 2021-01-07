@@ -1,0 +1,180 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>Get Signature Link | Signature | Officely</title>
+            <style>
+                .btn.btn-lg {
+                    padding: 10px 60px !important;
+                    font-size: 12px;
+                    border: 1px solid #bfb6b6;
+                    margin-top: 10px !important;
+                    border-radius: 20px !important;
+                }
+            </style>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>Get Signature Link</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">Signature</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">Get Signature Link</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+
+                        <div class="row">
+                    
+                            <div class="col-md-12">
+                    
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!--  <h6 class="card-title">Basic Demo</h6> -->
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5>Get Signature Link</h5>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-8">
+                                                        <form action="{% url 'officelyapp:getDoc' %}" method="post" enctype="multipart/form-data">
+                                                            {% csrf_token %}    
+                                                            <div class="row">
+                                                                <div class="col-md-8">
+                                                                    <input type="file" class="form-control" name="file" id="file" accept="application/pdf" required>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <button type="submit" class="btn btn-info">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-6 col-12 mt-4" contenteditable="true" id="para">
+                                                    {% if page_text %}
+                                                        {{ page_text }}
+                                                    {% endif %}
+                                                    <h5>The Parties hereby agree as follows:</h5>
+                                                    <p>
+                                                        1. For purposes of this Agreement, "Confidential Information" shall mean any and all non-public
+                                                        information the Company has disclosed or may disclose to the Recipient, including but not limited to
+                                                        information related to: production of legal materials, software development and design, business or
+                                                        software architecture, software not yet known to the public, clients or prospective clients, internal
+                                                        communications, events, or meetings, or any other research, development, operations, marketing,
+                                                        transactions, regulatory affairs, discoveries, inventions, methods, processes, articles, materials,
+                                                        algorithms, formulas, specifications, designs, drawings, data, strategies, plans, prospects, know-how
+                                                        and ideas, whether tangible or intangible, and including all copies, analyses and other derivatives
+                                                        thereof. 
+                                                    </p>
+                                                    <p>
+                                                        2. The Recipient agrees (i) not to disclose any Confidential Information or any information derived
+                                                        therefrom to any third person, (ii) to keep the Company’s Confidential Information confidential and
+                                                        take all the reasonable precautions to protect the confidentiality of such Confidential Information with
+                                                        the same degree of care with which it protects the confidentiality of its own confidential information,
+                                                        but in no event with less than a reasonable degree of care, and (iii) not to use any Confidential
+                                                        Information for any purpose whatsoever except to advance the legitimate business interests of the
+                                                        Company under written or oral instruction of the Company’s authorized officers. 
+                                                    </p>
+                                                    <p>
+                                                        3. All right, title, and interest in and to the Confidential Information shall remain with Company or its
+                                                        licensors. Nothing in this Agreement is intended to grant any rights to Recipient under any patents,
+                                                        copyrights, trademarks, or trade secrets of Company. 
+                                                    </p>
+                                                    <p>
+                                                        4. The validity, construction and enforceability of this Agreement shall be governed in all respects by
+                                                        the law of the State of Delaware. This Agreement may not be amended except in writing signed by a
+                                                        duly authorized representative of the respective Parties. This Agreement shall control in the event of
+                                                        a conflict with any other agreement between the Parties with respect to the subject matter hereof.
+                                                        The failure of either party to enforce its rights under this Agreement at any time for any period shall
+                                                        not be construed as a waiver of such rights. 
+                                                    </p>
+                                                    <p>IN WITNESS WHEREOF, the Parties have executed this Agreement as of the date first above written.</p>
+                                                    <div class="row">
+                                                        <div class="col-md-6 pull-left">___________________(Signature)</div>
+                                                        <div class="col-md-2"></div>
+                                                        <div class="col-md-4 pull-right">___________________(ID)</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-12 mt-4 text-center">
+                                                    <h5 class="text-center mt-4">Drag & Drop</h5>
+                                                    <div class="btn-group-vertical" contenteditable="false" style="align-items: center; padding: 20px; border: 1px solid #796f6f; border-radius: 5%;" role="group" aria-label="Vertical button group">
+                                                        <p><button draggable="true" id="text" ondragstart="drag(event)" class="btn btn-outline-primary btn-amber pl-4 pr-4 btn-lg"> Text BOX</button></p>
+                                                        <p><button draggable="true" id="date" ondragstart="drag(event)"  class="btn btn-outline-primary btn-amber pl-4 pr-4 btn-lg"> Date BOX</button></p>
+                                                        <p><button draggable="true" id="number" ondragstart="drag(event)"  class="btn btn-outline-primary btn-amber pl-4 pr-4 btn-lg"> Number BOX</button></p>
+                                                        <p><button draggable="true" id="phone" ondragstart="drag(event)"  class="btn btn-outline-primary btn-amber pl-4 pr-4 btn-lg"> Phone BOX</button></p>
+                                                        <p><button draggable="true" id="address" ondragstart="drag(event)"  class="btn btn-outline-primary btn-amber pl-4 pr-4 btn-lg"> Address BOX</button></p>
+                                                        <p><button draggable="true" id="sign" ondragstart="drag(event)"  class="btn btn-outline-primary btn-amber pl-4 pr-4 btn-lg"> Signature BOX</button></p>
+                                                        <br>
+                                                        <p><button class="btn btn-outline-primary btn-amber pl-4 pr-4 btn-lg" style="justify-content: center; color:black"> API Box</button></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-6">
+                                                <br>
+                                                <a href="{% url 'officelyapp:saveTemplate' %}" id="saving" class="btn btn-info pull-right">Save Template</a>
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-outline-primary btn-rounded" style="float:right;"><i class="fa fa-link mr-2"></i>Get Link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+            <script>
+                function drag(ev) {
+                    if (ev.target.id == 'text') {
+                        ev.dataTransfer.setData("text/html", '<input type="text">');
+                    }
+                    else if (ev.target.id == 'date') {
+                        ev.dataTransfer.setData("text/html", '<input type="date">');
+                    }
+                    else if (ev.target.id == 'number') {
+                        ev.dataTransfer.setData("text/html", '<input type="number">');
+                    }
+                    else if (ev.target.id == 'phone') {
+                        ev.dataTransfer.setData("text/html", '<input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">');
+                    }
+                    else if (ev.target.id == 'address') {
+                        ev.dataTransfer.setData("text/html", '<textarea></textarea>');
+                    }
+                    else if (ev.target.id == 'sign') {
+                        ev.dataTransfer.setData("text/html", '<textarea></textarea>');
+                    }
+                }
+
+                // $(document).ready(function(){
+                //     $("#saving").click(function(){
+                //         $("#para").load("temlpate.html #newPara");
+                //     });
+                // });
+            </script>
+        </body>
+    </html>

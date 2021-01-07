@@ -1,0 +1,101 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>Enduser Document | OCR | Officely</title>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>Enduser Document</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">OCR</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">Enduser Document</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p class="font-weight-bold">Enduser</p>
+                                                <input type="text" class="form-control" value="http://www.officely.ai/signatureLink/example" />
+                                            </div>
+                                            <div class="col-12">
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="font-weight-bold">ID Photo</p>
+                                                        <label>Note : The Maximum file For “Name OCR Template” is 3 pages MAX</label>
+                                                        <form action="/file-upload" class="dropzone dz-clickable">
+                                                            <div class="dz-default dz-message"><span>Upload file here</span></div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col-6 text-center " style="margin-top:81px">
+                                                        <label class="font-size-20">Watch attach guide File</label><span class="fa fa-caret-right text-primary font-weight-800 font-size-30 pt-4 ml-2"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="text-center mt-4">1</p>
+                                                <hr />
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="font-weight-bold">Bank transaction pdf</p>
+                                                        <form action="/file-upload" class="dropzone dz-clickable">
+                                                            <div class="dz-default dz-message"><span>Upload file here</span></div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col-6 text-center " style="margin-top:81px">
+                                                        <label class="font-size-20">Watch attach guide File</label><span class="fa fa-caret-right text-primary font-weight-800 font-size-30 pt-4 ml-2"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="text-center mt-4">2</p>
+                                                <hr />
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="font-weight-bold">Payslip for last 3 months</p>
+                                                        <form action="/file-upload" class="dropzone dz-clickable">
+                                                            <div class="dz-default dz-message"><span>Upload file here</span></div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col-6 text-center " style="margin-top:81px">
+                                                        <label class="font-size-20">Watch attach guide File</label><span class="fa fa-caret-right text-primary font-weight-800 font-size-30 pt-4 ml-2"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="text-center mt-4">3</p>
+                                                <hr />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-12 text-right">
+                                            <button class="btn btn-outline-primary btn-rounded" type="button"> <i class="fa fa-save mr-2"></i>Save & Share</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+        </body>
+    </html>

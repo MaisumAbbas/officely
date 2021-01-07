@@ -1,0 +1,162 @@
+{% load static %}
+<!-- begin::navigation -->
+<style>
+    ul li a {
+        font-weight: bold;
+    }
+</style>
+<div class="navigation">
+
+    <div class="navigation-menu-tab">
+        <div>
+            <div class="navigation-menu-tab-header" data-toggle="tooltip" title="Officely" data-placement="right">
+                <a href="{% url 'officelyapp:profile' %}">
+                    <figure class="avatar avatar-sm">
+                        <img src="{% static 'assets/media/image/logohd.jpeg' %}" class="rounded-circle" alt="avatar">
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <div class="flex-grow-1">
+            <ul>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="Dashboard"
+                       data-nav-target="#dashboard">
+                        <span class="fa fa-bar-chart" style="font-size:20px"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="Signature" data-nav-target="#signature">
+                        <span class="fa fa-paperclip" style="font-size:20px"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="Scheduled"
+                       data-nav-target="#meeting">
+                        <span class="fa fa-calendar" style="font-size:20px"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="OCR" data-nav-target="#ocr">
+                        <span class="fa fa-pencil" style="font-size:20px"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="Customer" data-nav-target="#customer">
+                        <span class=" fa fa-male" style="font-size:20px"></span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="{% url 'login' %}" data-toggle="tooltip" data-placement="right" title="Logout">
+                        <span class=" fa fa-sign-out" style="font-size:20px"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- begin::navigation menu   -->
+    <div class="navigation-menu-body">
+
+        <!-- begin::navigation-logo -->
+        <div>
+            <div id="navigation-logo">
+                <a href="#">
+                    <img class="logo" src="{% static 'assets/media/image/logohd1.jpeg' %}" alt="logo" style="max-width: 100px;">
+                </a>
+            </div>
+        </div>
+        <!-- end::navigation-logo -->
+
+        <div class="navigation-menu-group">
+
+            <div id="dashboard">
+                <ul>
+                    <li class=" active"><a href="{% url 'officelyapp:dashboard' %}"> Dashboard</a> </li>
+                </ul>
+            </div>
+            <div id="signature">
+                <ul>
+                    <li>
+                        <a href="{% url 'officelyapp:getSignatureLink' %}">
+                            <span>Get Signature Link</span>
+                            <!--<span class="badge badge-danger">5</span>-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'officelyapp:getSignatureTemplate' %}">
+                            <span>My Signature Templates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'officelyapp:enduserSignature' %}">
+                            <span>Enduser Signature
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="meeting">
+                <ul>
+                    <li>
+                        <a href="{% url 'officelyapp:getMeetingLink' %}">
+                            <span>Get Meeting Link</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'officelyapp:getMeetingTemplate' %}">
+                            <span>My Meeting Templates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'officelyapp:enduserMeetingLink' %}">
+                           <span>Enduser Meeting Link</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="ocr">
+                <ul>
+                    <li> 
+                        <a href="{% url 'officelyapp:getNewDoc' %}">
+                            <span>Get New Document From Customer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'officelyapp:enduserDoc' %}">
+                            <span>Enduser Document</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="customer">
+                <ul>
+                    <li>
+                        <a href="{% url 'officelyapp:newCustomer' %}">
+                            <span>New Customer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'officelyapp:uploadCustomer' %}">
+                            <span>Upload Excel File Customer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'officelyapp:getCustomer' %}">
+                            <span>Get Customer From Google Sheet</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'officelyapp:apiCustomer' %}">
+                            <span>API To Get Customer From Campaign</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end::navigation menu -->
+</div>

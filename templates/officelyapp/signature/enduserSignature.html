@@ -1,0 +1,110 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>Signature | Enduser Signature | Officely</title>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>Enduser Signature</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">Signature</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">Enduser Signature</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5>Enduser</h5>
+                                                <input type="text" class="form-control" value="http://www.officely.ai/signaturelink/example" />
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-6 col-12 mt-4 text-justify">
+                                                <h5>The Parties hereby agree as follows:</h5>
+                                                <p>
+                                                    1. For purposes of this Agreement, "Confidential Information" shall mean any and all non-public
+                                                    information the Company has disclosed or may disclose to the Recipient, including but not limited to
+                                                    information related to: production of legal materials, software development and design, business or
+                                                    software architecture, software not yet known to the public, clients or prospective clients, internal
+                                                    communications, events, or meetings, or any other research, development, operations, marketing,
+                                                    transactions, regulatory affairs, discoveries, inventions, methods, processes, articles, materials,
+                                                    algorithms, formulas, specifications, designs, drawings, data, strategies, plans, prospects, know-how
+                                                    and ideas, whether tangible or intangible, and including all copies, analyses and other derivatives
+                                                    thereof. <br>
+                                                    2. The Recipient agrees (i) not to disclose any Confidential Information or any information derived
+                                                    therefrom to any third person, (ii) to keep the Company’s Confidential Information confidential and
+                                                    take all the reasonable precautions to protect the confidentiality of such Confidential Information with
+                                                    the same degree of care with which it protects the confidentiality of its own confidential information,
+                                                    but in no event with less than a reasonable degree of care, and (iii) not to use any Confidential
+                                                    Information for any purpose whatsoever except to advance the legitimate business interests of the
+                                                    Company under written or oral instruction of the Company’s authorized officers. <br>
+                                                    3. All right, title, and interest in and to the Confidential Information shall remain with Company or its
+                                                    licensors. Nothing in this Agreement is intended to grant any rights to Recipient under any patents,
+                                                    copyrights, trademarks, or trade secrets of Company. <br>
+                                                    4. The validity, construction and enforceability of this Agreement shall be governed in all respects by
+                                                    the law of the State of Delaware. This Agreement may not be amended except in writing signed by a
+                                                    duly authorized representative of the respective Parties. This Agreement shall control in the event of
+                                                    a conflict with any other agreement between the Parties with respect to the subject matter hereof.
+                                                    The failure of either party to enforce its rights under this Agreement at any time for any period shall
+                                                    not be construed as a waiver of such rights. <br>
+                                                    IN WITNESS WHEREOF, the Parties have executed this Agreement as of the date first above
+                                                    written. <br>
+                                                    <div class="row">
+                                                        <div class="col-md-6 pull-left">
+                                                            ___________________(Signature)
+                                                        </div>
+                                                        <div class="col-md-2"></div>
+                                                        <div class="col-md-4 pull-right">
+                                                            ___________________(ID)
+                                                        </div>
+                                                    </div>
+                    
+                                                </p>
+                                            </div>
+                                            <div class="col-md-4 col-12 mt-4 ">
+                                                <h5 class=" mt-4">Id</h5>
+                                                <input type="text" class="form-control" />
+                                                <h5 class="mt-2">Signature</h5>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-12">
+                                                        <form action="/file-upload" class="dropzone dz-clickable" style="border-radius:10px">
+                                                            <div class="dz-default dz-message"><span> </span></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-outline-primary btn-rounded" style="float:right;"> <i class="fa fa-save mr-2"></i>Save</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+        </body>
+    </html>

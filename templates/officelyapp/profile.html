@@ -1,0 +1,92 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>Profile | Officely</title>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>Profile</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">Dashboard</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <figure class="avatar avatar-lg m-b-20">
+                                            <img src="https://p.kindpng.com/picc/s/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" class="rounded-circle" alt="...">
+                                        </figure>
+                                        <h5 class="mb-1">Roxana Roussell</h5>
+                                        <p class="text-muted small">Web Developer</p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus repudiandae eveniet
+                                            harum.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <ul class="list-inline">
+                
+                                                    <li class="list-inline-item">
+                                                        <button class="btn btn-primary" type="submit">Update</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br><br><br><br>
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+        </body>
+    </html>

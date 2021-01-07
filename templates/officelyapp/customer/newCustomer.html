@@ -1,0 +1,742 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>New Customer | Customer | Officely</title>
+            <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+            <style>
+                .counter {
+                    position: relative;
+                    top: -23px;
+                    left: auto;
+                    z-index: 2;
+                    padding: 1px 7px;
+                    margin-left: -23px;
+                    font-size: 11px;
+                    color: #fff;
+                    background-color: #fe1212;
+                    border-radius: 10em;
+                }
+            </style>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>New Customer</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">Customer</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">New Customer</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-0">
+                                    <div class="card-body text-center">
+                                        <figure class="avatar avatar-lg m-b-20">
+                                            <img src="{% static '/assets/media/image/pp.png' %}" class="rounded-circle" alt="...">
+                                        </figure>
+                                        <h5 class="mb-1">Roxana Roussell</h5>
+                                        <p class="text-muted small">Web Developer</p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus repudiandae eveniet
+                                            harum.
+                                        </p>
+                                        <a href="#" class="btn btn-outline-primary btn-rounded">
+                                            <i data-feather="edit-2" class="mr-2"></i> Edit Profile
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <br>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="col-sm-3 col-6 mt-4">
+                                                        <a class="btn-floating btn-lg btn-whatsapp bg-success" href="{% url 'officelyapp:whatsapp' %}" role="button">
+                                                            <i class="fab fa-whatsapp"></i>
+                                                        </a>
+                                                        <span class="counter">22</span>
+                                                    </div>
+                                                    <div class="col-sm-3 col-6 mt-4">
+                                                        <a href="{% url 'officelyapp:mail' %}" class="btn btn-email bg-primary">
+                                                            <i class="fas fa-envelope"></i>
+                                                        </a>
+                                                        <span class="counter">22</span>
+                                                    </div>
+                                                    <div class="col-sm-3 col-6 mt-4">
+                                                        <a href="{% url 'officelyapp:todo' %}" class="btn btn-email bg-danger">
+                                                            <i class="fas fa-clipboard-check"></i>
+                                                        </a>
+                                                        <span class="counter">22</span>
+                                                    </div>
+                                                    <div class="col-sm-3 col-6 mt-4">
+                                                        <a href="#" class="btn btn-email bg-info">
+                                                            <i class="fas fa-phone"></i>
+                                                        </a>
+                                                        <span class="counter">22</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-6 text-center mt-4">
+                                                        <a href="{% url 'officelyapp:getNewDoc' %}" class="btn btn-outline-primary btn-rounded" style="font-size: 11px;">
+                                                            Get OCR Link <i data-feather="arrow-down" class="ml-2"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-6 text-center mt-4">
+                                                        <a href="{% url 'officelyapp:getMeetingTemplate' %}" class="btn btn-outline-primary btn-rounded"style="font-size: 11px;">
+                                                            Get Meeting Link <i data-feather="arrow-down" class="ml-2"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-6 text-center mt-4">
+                                                        <a href="{% url 'officelyapp:getSignatureLink' %}" class="btn btn-outline-primary btn-rounded"style="font-size: 11px;">
+                                                            Get Signature Link <i data-feather="arrow-down" class="ml-2"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5>Information</h5>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <a href="#" class="btn btn-outline-primary btn-rounded">
+                                                    <i data-feather="edit-2" class="mr-2"></i> Edit
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p>First Name,<br>Last Name,<br>Age<br />Position<br />City<br />Address <br />Phone <br />Email</p>
+                                            </div>
+                                            <div class="col-6">
+                    
+                                                <p class="text-right">Tania<br>John<br>12<br />12<br />xyz<br />abc<br />22424<br />abc@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="mb-0">
+                                                <a href="" class="link-2">Frontend Development</a>
+                                                <span class="badge badge-success ml-2">Active</span>
+                                            </h5>
+                                            <div class="dropdown ml-auto">
+                                                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">View Detail</a>
+                                                    <a href="#" class="dropdown-item">Share</a>
+                                                    <a href="#" class="dropdown-item">Download</a>
+                                                    <a href="#" class="dropdown-item">Copy to</a>
+                                                    <a href="#" class="dropdown-item">Rename</a>
+                                                    <a href="#" class="dropdown-item text-danger">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-muted small mt-1 mb-3">10 opened tasks, 5 tasks completed</div>
+                                        <div class="progress mb-2" style="height: 5px;">
+                                            <div class="progress-bar bg-primary" style="width: 53%;"></div>
+                                        </div>
+                                        <p class="small">
+                                            <strong>53%</strong> completed
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac malesuada nisl.
+                                            Maecenas quis ultrices tellus.
+                                        </p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="text-muted mb-1 small">Created</div>
+                                                <div>02/01/2019</div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="text-muted mb-1 small">Deadline</div>
+                                                <div>03/12/2019</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="m-0">
+                                    <div class="card-body">
+                                        <div class="small mb-2">Team Member</div>
+                                        <div class="avatar-group">
+                                            <figure class="avatar avatar-sm">
+                                                <img src="{% static 'assets/media/image/user/women_avatar2.jpg' %}" class="rounded-circle" alt="avatar">
+                                            </figure>
+                                            <figure class="avatar avatar-sm">
+                                                <img src="{% static 'assets/media/image/user/women_avatar4.jpg' %}" class="rounded-circle" alt="avatar">
+                                            </figure>
+                                            <figure class="avatar avatar-sm">
+                                                <img src="{% static 'assets/media/image/user/man_avatar3.jpg' %}" class="rounded-circle" alt="avatar">
+                                            </figure>
+                                            <figure class="avatar avatar-sm">
+                                                <img src="{% static 'assets/media/image/user/man_avatar1.jpg' %}" class="rounded-circle" alt="avatar">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="card-title">Daily Task List</h6>
+                                            <div>
+                                                <a href="#" class="mr-3">
+                                                    <i class="fa fa-refresh"></i>
+                                                </a>
+                                                <div class="dropdown">
+                                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                    </a>
+                                                    <span class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item">Report</a>
+                                                        <a href="#" class="dropdown-item">Download</a>
+                                                        <a href="#" class="dropdown-item">Close</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-control custom-checkbox-success custom-checkbox todo-item">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label d-flex justify-content-between" for="customCheck1">
+                                                Talk
+                                                to new customers
+                                                <span class="text-muted">13 May 2019</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox-success custom-checkbox-success custom-checkbox todo-item">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck2" checked="">
+                                            <label class="custom-control-label d-flex justify-content-between" for="customCheck2">
+                                                Older
+                                                users will be deleted from
+                                                the system
+                                                <span class="text-muted">20 Apr 2019</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox-success custom-checkbox todo-item">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                            <label class="custom-control-label d-flex justify-content-between" for="customCheck3">
+                                                Assignment
+                                                will be
+                                                completed
+                                                <span class="text-muted">13 May 2019</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox-success custom-checkbox todo-item">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck4" checked="">
+                                            <label class="custom-control-label d-flex justify-content-between" for="customCheck4">
+                                                Customer
+                                                notes
+                                                <span class="text-muted">10 Jan 2018</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox-success custom-checkbox todo-item">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                            <label class="custom-control-label d-flex justify-content-between" for="customCheck5">
+                                                Clear
+                                                old log records and backup
+                                                will be taken
+                                                <span class="text-muted">13 May 2019</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-checkbox-success todo-item">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                            <label class="custom-control-label d-flex justify-content-between" for="customCheck6">
+                                                Talk
+                                                to new customers
+                                                <span class="text-muted">27 Feb 2019</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox-success custom-checkbox todo-item">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck7" checked="">
+                                            <label class="custom-control-label d-flex justify-content-between" for="customCheck7">
+                                                Older
+                                                users will be deleted from
+                                                the system
+                                                <span class="text-muted">13 May 2019</span>
+                                            </label>
+                                        </div>
+                                        <form class="mt-4">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Example text with button addon" placeholder="New task" aria-describedby="button-addon1">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-primary" type="button" id="button-addon1">
+                                                        Add
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4>Timeline</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="timeline">
+                                                    <div class="timeline-item">
+                                                        <div>
+                                                            <a href="#">
+                                                                <figure class="avatar avatar-sm mr-3 bring-forward">
+                                                                    <img src="{% static 'assets/media/image/user/women_avatar4.jpg' %}" class="rounded-circle" alt="image">
+                                                                </figure>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="d-flex justify-content-between mb-4">
+                                                                <span>
+                                                                    <a href="#">Martina Ash</a> shared a link
+                                                                </span>
+                                                                <span class="text-muted font-weight-normal">Tue 8:17pm</span>
+                                                            </h6>
+                                                            <a href="#">
+                                                                <div class="mb-3 border border-radius-1">
+                                                                    <div class="row no-gutters">
+                                                                        <div class="col-1">
+                                                                            <img src="{% static 'assets/media/image/photo6.jpg' %}" class="w-100" alt="image">
+                                                                        </div>
+                                                                        <div class="col-10 p-3">
+                                                                            <h5 class="line-height-16">Connection title</h5>
+                                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                                            Facilis, voluptatibus.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="timeline-item">
+                                                        <div>
+                                                            <figure class="avatar avatar-sm mr-3 bring-forward">
+                                                                <span class="avatar-title bg-success-bright text-success rounded-circle">C</span>
+                                                            </figure>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="d-flex justify-content-between mb-4">
+                                                                <span>
+                                                                    <a href="#">Jonny Richie</a> shared a post
+                                                                </span>
+                                                                <span class="text-muted font-weight-normal">Tue 8:17pm</span>
+                                                            </h6>
+                                                            <a href="#">
+                                                                <div class="mb-3 border p-3 border-radius-1">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid
+                                                                    aperiam commodi culpa debitis deserunt enim itaque laborum minima neque
+                                                                    nostrum pariatur perspiciatis, placeat quidem, ratione recusandae
+                                                                    reiciendis sapiente, ut veritatis vitae. Beatae dolore hic odio! Esse
+                                                                    officiis quidem voluptate.
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="timeline-item">
+                                                        <div>
+                                                            <figure class="avatar avatar-sm mr-3 bring-forward">
+                                                                <span class="avatar-title bg-info-bright text-info rounded-circle">K</span>
+                                                            </figure>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="d-flex justify-content-between mb-4">
+                                                                <span>
+                                                                    <a href="#">Jonny Richie</a> attached file
+                                                                </span>
+                                                                <span class="text-muted font-weight-normal">Tue 8:17pm</span>
+                                                            </h6>
+                                                            <a href="#">
+                                                                <div class="mb-3 border p-3 border-radius-1">
+                                                                    <i class="fa fa-file-pdf-o mr-2"></i> filename12334.pdf
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="timeline-item">
+                                                        <div>
+                                                            <figure class="avatar avatar-sm mr-3 bring-forward">
+                                                                <span class="avatar-title bg-warning-bright text-warning rounded-circle">
+                                                                    <i class="ti-image"></i>
+                                                                </span>
+                                                            </figure>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="d-flex justify-content-between mb-4">
+                                                                <span>
+                                                                    <a href="#">Jonny Richie</a> shared files
+                                                                </span>
+                                                                <span class="text-muted font-weight-normal">Tue 8:17pm</span>
+                                                            </h6>
+                                                            <div class="row row-xs">
+                                                                <div class="col-xl-2 col-lg-3 col-md-4 col-sx-6">
+                                                                    <figure>
+                                                                        <img src="{% static 'assets/media/image/portfolio-five.jpg' %}" class="w-100 border-radius-1" alt="image">
+                                                                    </figure>
+                                                                </div>
+                                                                <div class="col-xl-2 col-lg-3 col-md-4 col-sx-6">
+                                                                    <figure>
+                                                                        <img src="{% static 'assets/media/image/portfolio-one.jpg' %}" class="w-100 border-radius-1" alt="image">
+                                                                    </figure>
+                                                                </div>
+                                                                <div class="col-xl-2 col-lg-3 col-md-4 col-sx-6">
+                                                                    <figure>
+                                                                        <img src="{% static 'assets/media/image/portfolio-three.jpg' %}" class="w-100 border-radius-1" alt="image">
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="timeline-item">
+                                                        <div>
+                                                            <figure class="avatar avatar-sm mr-3 bring-forward">
+                                                                <span class="avatar-title bg-youtube rounded-circle">Y</span>
+                                                            </figure>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="d-flex justify-content-between">
+                                                                <span>
+                                                                    <a href="#">Jonny Richie</a> shared video
+                                                                </span>
+                                                                <span class="text-muted font-weight-normal">Tue 8:17pm</span>
+                                                            </h6>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, placeat.</p>
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <div class="embed-responsive embed-responsive-16by9 m-t-b-5">
+                                                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l-epKcOA7RQ" allowfullscreen=""></iframe>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <button class="btn btn-outline-primary btn-block btn-rounded" >Upload File</button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12 pr-0">
+                                                <p><i data-feather="file" style="width: 15px;"></i> File <span class="pull-right">14</span><hr />,<br><i data-feather="message-circle" style="width: 15px;"></i> My Device <span class="pull-right">5</span><hr /><br><i data-feather="cloud-lightning" style="width: 15px;"></i> Recent<span class="pull-right">0</span> <hr /><br><i data-feather="star" style="width: 15px;"></i> Important<span class="pull-right">12</span> <hr /><br><i data-feather="trash-2" style="width: 15px;"></i>Deleted File <span class="pull-right">0</span><hr /></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="row app-block">
+                                    <div class="col-md-12 app-content">
+                                        <div class="app-content-overlay"></div>
+                                        <div class="app-action">
+                                            <div class="action-left">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item mb-0">
+                                                        <a href="{% url 'officelyapp:getSignatureLink' %}" class="btn btn-outline-primary">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus mr-2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                            Add
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-inline-item mb-0">
+                                                        <a href="#" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+                                                            Order by
+                                                        </a>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#">PDF</a>
+                                                            <a class="dropdown-item" href="#">Word</a>
+                                                            <a class="dropdown-item" href="#">Excel</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="action-right">
+                                                <form class="d-flex mr-3">
+                                                    <a href="#" class="app-sidebar-menu-button btn btn-outline-primary">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                                                    </a>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Search file" aria-describedby="button-addon1">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-light" type="button" id="button-addon1">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="card app-content-body">
+                                            <div class="card-body">
+                                                <h6 class="font-size-11 text-uppercase mb-4">Recently Files</h6>
+                                                <div class="row">
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                        <div class="card app-file-list">
+                                                            <div class="app-file-icon">
+                                                                <i class="fa fa-file-excel-o text-success"></i>
+                                                                <div class="dropdown position-absolute top-0 right-0 mr-3">
+                                                                    <a href="#" class="font-size-14" data-toggle="dropdown">
+                                                                        <i class="fa fa-ellipsis-v"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                        <a href="#" class="dropdown-item">View Details</a>
+                                                                        <a href="#" class="dropdown-item">Edit</a>
+                                                                        <a href="#" class="dropdown-item">Share</a>
+                                                                        <a href="#" class="dropdown-item">Download</a>
+                                                                        <a href="#" class="dropdown-item">Copy to</a>
+                                                                        <a href="#" class="dropdown-item">Move to</a>
+                                                                        <a href="#" class="dropdown-item">Rename</a>
+                                                                        <a href="#" class="dropdown-item">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-2 small">
+                                                                <div>last-months-report.xlsx</div>
+                                                                <div class="text-muted">
+                                                                    <input type="checkbox" name="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                        <div class="card app-file-list">
+                                                            <div class="app-file-icon">
+                                                                <i class="fa fa-file-pdf-o text-danger"></i>
+                                                                <div class="dropdown position-absolute top-0 right-0 mr-3">
+                                                                    <a href="#" class="font-size-14" data-toggle="dropdown">
+                                                                        <i class="fa fa-ellipsis-v"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                        <a href="#" class="dropdown-item">View Details</a>
+                                                                        <a href="#" class="dropdown-item">Share</a>
+                                                                        <a href="#" class="dropdown-item">Download</a>
+                                                                        <a href="#" class="dropdown-item">Copy to</a>
+                                                                        <a href="#" class="dropdown-item">Move to</a>
+                                                                        <a href="#" class="dropdown-item">Rename</a>
+                                                                        <a href="#" class="dropdown-item">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-2 small">
+                                                                <div>resume.pdf</div>
+                                                                <div class="text-muted">
+                                                                    <input type="checkbox" name="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                        <div class="card app-file-list">
+                                                            <div class="app-file-icon">
+                                                                <i class="fa fa-file-excel-o text-success"></i>
+                                                                <div class="dropdown position-absolute top-0 right-0 mr-3">
+                                                                    <a href="#" class="font-size-14" data-toggle="dropdown">
+                                                                        <i class="fa fa-ellipsis-v"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                        <a href="#" class="dropdown-item">View Details</a>
+                                                                        <a href="#" class="dropdown-item">Share</a>
+                                                                        <a href="#" class="dropdown-item">Download</a>
+                                                                        <a href="#" class="dropdown-item">Copy to</a>
+                                                                        <a href="#" class="dropdown-item">Move to</a>
+                                                                        <a href="#" class="dropdown-item">Rename</a>
+                                                                        <a href="#" class="dropdown-item">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-2 small">
+                                                                <div>last-months-report.xlsx</div>
+                                                                <div class="text-muted">
+                                                                    <input type="checkbox" name="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                        <div class="card app-file-list">
+                                                            <div class="app-file-icon">
+                                                                <i class="fa fa-file-text-o text-warning"></i>
+                                                                <div class="dropdown position-absolute top-0 right-0 mr-3">
+                                                                    <a href="#" class="font-size-14" data-toggle="dropdown">
+                                                                        <i class="fa fa-ellipsis-v"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                        <a href="#" class="dropdown-item">View Details</a>
+                                                                        <a href="#" class="dropdown-item">Share</a>
+                                                                        <a href="#" class="dropdown-item">Download</a>
+                                                                        <a href="#" class="dropdown-item">Copy to</a>
+                                                                        <a href="#" class="dropdown-item">Move to</a>
+                                                                        <a href="#" class="dropdown-item">Rename</a>
+                                                                        <a href="#" class="dropdown-item">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-2 small">
+                                                                <div>todo-list.txt</div>
+                                                                <div class="text-muted">
+                                                                    <input type="checkbox" name="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h6 class="font-size-11 text-uppercase mb-4">Updated Files</h6>
+                                                <div class="row">
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                        <div class="card app-file-list">
+                                                            <div class="app-file-icon">
+                                                                <i class="fa fa-file-powerpoint-o text-secondary"></i>
+                                                                <div class="dropdown position-absolute top-0 right-0 mr-3">
+                                                                    <a href="#" class="font-size-14" data-toggle="dropdown">
+                                                                        <i class="fa fa-ellipsis-v"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                        <a href="#" class="dropdown-item">View Details</a>
+                                                                        <a href="#" class="dropdown-item">Share</a>
+                                                                        <a href="#" class="dropdown-item">Download</a>
+                                                                        <a href="#" class="dropdown-item">Copy to</a>
+                                                                        <a href="#" class="dropdown-item">Move to</a>
+                                                                        <a href="#" class="dropdown-item">Rename</a>
+                                                                        <a href="#" class="dropdown-item">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-2 small">
+                                                                <div>presentation-file.pptx</div>
+                                                                <div class="text-muted">
+                                                                    <input type="checkbox" name="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                        <div class="card app-file-list">
+                                                            <div class="app-file-icon">
+                                                                <i class="fa fa-file-excel-o text-success"></i>
+                                                                <div class="dropdown position-absolute top-0 right-0 mr-3">
+                                                                    <a href="#" class="font-size-14" data-toggle="dropdown">
+                                                                        <i class="fa fa-ellipsis-v"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                        <a href="#" class="dropdown-item">View Details</a>
+                                                                        <a href="#" class="dropdown-item">Share</a>
+                                                                        <a href="#" class="dropdown-item">Download</a>
+                                                                        <a href="#" class="dropdown-item">Copy to</a>
+                                                                        <a href="#" class="dropdown-item">Move to</a>
+                                                                        <a href="#" class="dropdown-item">Rename</a>
+                                                                        <a href="#" class="dropdown-item">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-2 small">
+                                                                <div>contact-list.xlsx</div>
+                                                                <div class="text-muted">
+                                                                    <input type="checkbox" name="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                        <div class="card app-file-list">
+                                                            <div class="app-file-icon">
+                                                                <i class="fa fa-file-zip-o text-primary"></i>
+                                                                <div class="dropdown position-absolute top-0 right-0 mr-3">
+                                                                    <a href="#" class="font-size-14" data-toggle="dropdown">
+                                                                        <i class="fa fa-ellipsis-v"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                        <a href="#" class="dropdown-item">View Details</a>
+                                                                        <a href="#" class="dropdown-item">Share</a>
+                                                                        <a href="#" class="dropdown-item">Download</a>
+                                                                        <a href="#" class="dropdown-item">Copy to</a>
+                                                                        <a href="#" class="dropdown-item">Move to</a>
+                                                                        <a href="#" class="dropdown-item">Rename</a>
+                                                                        <a href="#" class="dropdown-item">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-2 small">
+                                                                <div>website-html-files.zip</div>
+                                                                <div class="text-muted">
+                                                                    <input type="checkbox" name="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                        <div class="card app-file-list">
+                                                            <div class="app-file-icon">
+                                                                <i class="fa fa-file-word-o text-info"></i>
+                                                                <div class="dropdown position-absolute top-0 right-0 mr-3">
+                                                                    <a href="#" class="font-size-14" data-toggle="dropdown">
+                                                                        <i class="fa fa-ellipsis-v"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                        <a href="#" class="dropdown-item">View Details</a>
+                                                                        <a href="#" class="dropdown-item">Share</a>
+                                                                        <a href="#" class="dropdown-item">Download</a>
+                                                                        <a href="#" class="dropdown-item">Copy to</a>
+                                                                        <a href="#" class="dropdown-item">Move to</a>
+                                                                        <a href="#" class="dropdown-item">Rename</a>
+                                                                        <a href="#" class="dropdown-item">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-2 small">
+                                                                <div>articles.docx</div>
+                                                                <div class="text-muted">
+                                                                    <input type="checkbox" name="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+        </body>
+    </html>

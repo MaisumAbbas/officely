@@ -1,0 +1,184 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>My Meeting Template | Schedule | Officely</title>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>My Meeting Template</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">Schedule</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">My Meeting Template</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+                        <div class="row app-block">
+                            <div class="col-md-12 app-content">
+                                <div class="app-content-overlay"></div>
+                                <div class="app-action">
+                                    <div class="action-left">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item mb-0">
+                                                <a href="{% url 'officelyapp:getSignatureLink' %}" class="btn btn-outline-primary">
+                                                    <i data-feather="plus" class="mr-2"></i>
+                                                    Add
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item mb-0">
+                                                <a href="#" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+                                                    Order by
+                                                </a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">PDF</a>
+                                                    <a class="dropdown-item" href="#">Word</a>
+                                                    <a class="dropdown-item" href="#">Excel</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="action-right">
+                                        <form class="d-flex mr-3">
+                                            <a href="#" class="app-sidebar-menu-button btn btn-outline-primary">
+                                                <i data-feather="menu"></i>
+                                            </a>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Search file"
+                                                       aria-describedby="button-addon1">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-light" type="button" id="button-addon1">
+                                                        <i data-feather="search"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card app-content-body">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                                <div class="card app-file-list">
+                                                    <div class="p-2 small">
+                                                        <div class="text-muted">
+                                                            <label><input type="checkbox" name=""> Template Meeting Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calendar-demo"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                                <div class="card app-file-list">
+                                                    <div class="p-2 small">
+                                                        <div class="text-muted">
+                                                            <label><input type="checkbox" name=""> Template Meeting Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calendar-demo"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                                <div class="card app-file-list">
+                                                    <div class="p-2 small">
+                                                        <div class="text-muted">
+                                                            <label><input type="checkbox" name=""> Template Meeting Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calendar-demo"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h6 class="font-size-11 text-uppercase mb-4">Updated Files</h6>
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                                <div class="card app-file-list">
+                                                    <div class="p-2 small">
+                                                        <div class="text-muted">
+                                                            <label><input type="checkbox" name=""> Template Meeting Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calendar-demo"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                                <div class="card app-file-list">
+                                                    <div class="p-2 small">
+                                                        <div class="text-muted">
+                                                            <label><input type="checkbox" name=""> Template Meeting Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calendar-demo"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                                <div class="card app-file-list">
+                                                    <div class="p-2 small">
+                                                        <div class="text-muted">
+                                                            <label><input type="checkbox" name=""> Template Meeting Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calendar-demo"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row ">
+                                                    <div class="col-md-5">
+                                                        <nav aria-label="...">
+                                                            <ul class="pagination">
+                                                                <li class="page-item disabled">
+                                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                                                </li>
+                                                                <li class="page-item active"><a class="page-link" href="#">1<span class="sr-only">(current)</span></a></li>
+                                                                <li class="page-item" aria-current="page">
+                                                                    <a class="page-link" href="#">2 </a>
+                                                                </li>
+                                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#">Next</a>
+                                                                </li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                    <div class="col-md-7 mt-3">
+                                                        <button class="btn btn-outline-primary btn-rounded" style="float:right;" data-toggle="modal" data-target="#createDesQuoteLinkModal" data-whatever=""><i class="fa fa-link mr-2"></i>Get Link</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+            <script>
+                setTimeout(function () {
+                    //$('.fc-month-button').removeClass("fc-corner-left fc-state-active");
+                    $('.fc-agendaWeek-button').click();
+                }, 1000);
+            
+                function drop(target, event) {
+                    event.preventDefault();
+                    target.innerHTML = event.dataTransfer.getData("text/plain");
+                };
+            </script>
+        </body>
+    </html>

@@ -1,0 +1,122 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>Get Meeting Link | Schedule | Officely</title>
+            <style type="text/css">
+                .btn:disabled {
+                    opacity: 1;
+                }
+        
+                input[type="datetime-local"] {
+                    padding: 10px !important;
+                }
+        
+                .btn.btn-primary {
+                    background: #027DFF !important;
+                    border-color: #027DFF !important;
+                }
+                .box {
+                    border: 1px solid #c3baba;
+                    height: 70px;
+                    margin: 10px;
+                    padding: 5px;
+                    float: left;
+                    border-radius:5px;
+                }
+                .dot {
+                    height: 10px;
+                    width: 10px;
+                    background-color: yellow;
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+                .notDraggable {
+                    user-select: none;
+                }
+            </style>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>Get Meeting Link</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">Schedule</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">Get Meeting Link</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Template Meeting name</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Template Meeting name</label>
+                                                    <select class="form-control">
+                                                    <option>Zoom</option>
+                                                    <option>Frontal Meeting</option>
+                                                    <option>Phone Meeting</option></select>
+                                                </div>
+                                                <div class="col-md-6 mt-3">
+                                                    <label>Location</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="col-12"></div>
+                                                <div class="col-md-6 mt-3">
+                                                    <label>Choose When You Are Not Available</label><br />
+                                                    <div class="box" ondragover="return false" ondrop="drop(this, event)">
+                                                        <span><b>Event</b></span><p>Drag and Drop Your Event  --->  <span><span class="dot"></span> busy</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                    <a href="#" class="d-none app-sidebar-menu-button btn btn-outline-light mb-3">
+                                                        <i data-feather="menu"></i>
+                                                    </a>
+                                                    <div id="calendar-demo"></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer mt-3">
+                                        <a class="btn btn-outline-primary btn-rounded" href="#" disabled="" style="float: right;"><i class="fa fa-link mr-2"></i> Get Link </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+            <script>
+                setTimeout(function () {
+                    //$('.fc-month-button').removeClass("fc-corner-left fc-state-active");
+                    $('.fc-agendaWeek-button').click();
+                }, 500);
+                
+                function drop(target, event) {
+                    event.preventDefault();
+                    target.innerHTML = event.dataTransfer.getData("text/plain");
+                };
+            </script>
+        </body>
+    </html>

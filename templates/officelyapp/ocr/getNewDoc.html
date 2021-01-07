@@ -1,0 +1,109 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>Get New Document | OCR | Officely</title>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>Get New Document</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">OCR</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">Get New Document</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!--  <h6 class="card-title">Basic Demo</h6> -->
+                                        <p>Get OCR Link</p>
+                                        <form action="/file-upload" class="">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>The name of the file to be sent from the client</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>How much Pages max ?</label>
+                                                    <input type="number" class="form-control" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Upload Video/jpeg/gif for For guidance</label>
+                                                    <input type="file" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <p class="text-center">1</p>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>The name of the file to be sent from the client</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>How much Pages max ?</label>
+                                                    <input type="number" class="form-control" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Upload Video/jpeg/gif for For guidance</label>
+                                                    <input type="file" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <p class="text-center">2</p>
+                                            <hr />
+                                            <div class="row justify-content-center">
+                                                <div class="col-12">
+                                                    <h1 class="text-center mt-4"><button type="button" class="btn btn-outline-primary" style="border-radius:50%"><i class="fa fa-plus"></i></button></h1>
+                                                    <p class="text-center">Add another section</p>
+                                                </div>
+                
+                                            </div>
+                                            <br />
+                                            <p class="text-center">3</p>
+                                            <hr />
+                                            <div class="row justify-content-center">
+                                                <div class="col-12 text-center">
+                                                    <p class="text-center mt-4">Or Get “Name file be sent” from my Google / Outlook Sheet</p>
+                                                    <span class="text-center justify-content-center">
+                                                        <img src="{% static 'assets/media/image/googledrive.png' %}" width="80" />
+                                                    </span>
+                                                    <span>
+                                                        <img src="{% static 'assets/media/image/onedrive.png' %}" width="200" />
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-12 mt-3">
+                                                <button class="btn btn-outline-primary btn-rounded" style="float:right;"><i class="fa fa-link mr-2"></i> Get Link</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+        </body>
+    </html>

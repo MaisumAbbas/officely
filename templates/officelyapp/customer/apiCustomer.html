@@ -1,0 +1,54 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>API To Get Customer From Compaign | Customer | Officely</title>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>API To Get Customer From Compaign</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">Customer</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">API To Get Customer From Compaign</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p> Customer Campaign</p>
+                                        <form action="/file-upload" class="dropzone dz-clickable">
+                                            <div class="dz-default dz-message">
+                                                <span>
+                                                    <img src="{% static 'assets/media/image/onedrive.png' %}" width="200"> Get Customer From Campaign
+                                                </span>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <button class="btn btn-outline-primary btn-rounded" type="button"><i class="fa fa-save mr-2"></i> Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+        </body>
+    </html>

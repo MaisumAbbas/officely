@@ -1,0 +1,59 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+    
+        <head>
+            {% include "includes/head.html" %}
+            <title>Log In | Officely</title>
+        </head>
+
+        <body class="form-membership">
+
+            <!-- begin::preloader-->
+            <div class="preloader">
+                <div class="preloader-icon"></div>
+            </div>
+            <!-- end::preloader -->
+
+            <div class="form-wrapper">
+
+                <!-- logo -->
+                <div id="logo">
+                    <img class="logo" src="{% static 'assets/media/image/logo.png' %}" alt="image">
+                    <img class="logo-dark" src="{% static 'assets/media/image/logo.png' %}" alt="image">
+                </div>
+                <!-- ./ logo -->
+
+                <h5>Sign In</h5>
+
+                <!-- form -->
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group d-flex justify-content-between">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Remember me</label>
+                        </div>
+                        <a href="#">Reset Password</a>
+                    </div>
+                    <input type="submit" value="Sign In" class="btn btn-primary btn-block">
+                    <hr>
+                    <div class="form-group d-flex justify-content-between">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Legal Notice</a>
+                    </div>
+                    <hr>
+                    <p class="text-muted">Don't have an account?</p>
+                    <a href="{% url 'register' %}" class="btn btn-outline-light btn-sm">Register Now!</a>
+                </form>
+                <!-- ./ form -->
+            </div>
+            {% include "includes/foot.html" %}
+        </body>
+    </html>

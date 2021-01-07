@@ -1,0 +1,54 @@
+<!doctype html>
+    {% load static %}
+    <html lang="en">
+        <head>
+            {% include "includes/head.html" %}
+            <title>Get Customer From Google Sheet | Customer | Officely</title>
+        </head>
+        <body class="navigation-toggle-one">
+            {% include "officelyapp/includes/header.html" %}
+            <div id="main">
+                {% include "officelyapp/includes/sidebar.html" %}
+                <div class="main-content">
+                    <!-- begin::page-header -->
+                    <div class="page-header">
+                        <div class="container-fluid d-sm-flex justify-content-between">
+                            <h4>Get Customer From Google Sheet</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#">Customer</a>
+                                    </li>
+                                    &nbsp;<small>/</small>&nbsp;
+                                    <li class="breadcrumb-item active" aria-current="page">Get Customer From Google Sheet</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end::page-header -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p>Get Customer From Google Drive</p>
+                                        <form action="/file-upload" class="dropzone dz-clickable">
+                                            <div class="dz-default dz-message">
+                                                <span>
+                                                    <img src="{% static '/assets/media/image/googledrive.png' %}" width="80">Get Customer From Google Drive
+                                                </span>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <button class="btn btn-outline-primary btn-rounded" type="button"><i class="fa fa-save mr-2"></i>Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "officelyapp/includes/footer.html" %}
+                </div>
+            </div>
+            {% include "includes/foot.html" %}
+        </body>
+    </html>

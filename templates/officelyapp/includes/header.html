@@ -1,0 +1,143 @@
+{% load static %}
+<!-- begin::preloader-->
+<div class="preloader">
+    <div class="preloader-icon"></div>
+</div>
+<!-- end::preloader -->
+
+<!-- begin::header -->
+<div class="header">
+
+    <div>
+        <ul class="navbar-nav">
+
+            <!-- begin::navigation-toggler -->
+            <li class="nav-item navigation-toggler">
+                <a href="#" class="nav-link" title="Hide navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                </a>
+            </li>
+            <li class="nav-item navigation-toggler mobile-toggler">
+                <a href="#" class="nav-link" title="Show navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </a>
+            </li>
+            <!-- end::navigation-toggler -->
+
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Apps</a>
+                <div class="dropdown-menu dropdown-menu-big">
+                    <div class="p-3">
+                        <div class="row row-xs">
+                            <div class="col-6">
+                                <a href="{% url 'officelyapp:whatsapp' %}">
+                                    <div class="p-3 border-radius-1 border text-center mb-3">
+                                        <i class="width-23 height-23" data-feather="message-circle"></i>
+                                        <div class="mt-2">WhatsApp</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="{% url 'officelyapp:mail' %}">
+                                    <div class="p-3 border-radius-1 border text-center mb-3">
+                                        <i class="width-23 height-23" data-feather="mail"></i>
+                                        <div class="mt-2">Mail</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="{% url 'officelyapp:todo' %}">
+                                    <div class="p-3 border-radius-1 border text-center">
+                                        <i class="width-23 height-23" data-feather="check-circle"></i>
+                                        <div class="mt-2">Todo</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#">
+                                    <div class="p-3 border-radius-1 border text-center mb-3">
+                                        <i class="width-23 height-23" data-feather="phone"></i>
+                                        <div class="mt-2">Call</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                    <img width="18" class="mr-2"> Choose Language
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">
+                        <img width="18" src="http://officely.esquall.com/public/assets/media/image/flags/060-israel.png" class="mr-2" alt="flag">
+                        Hebrew
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <img width="18" src="http://officely.esquall.com/public/assets/media/image/flags/262-united-kingdom.png" class="mr-2" alt="flag"> English
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <img width="18" src="http://officely.esquall.com/public/assets/media/image/flags/068-united-arab-emirates.png" class="mr-2" alt="flag">
+                        Arabic
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <img width="18" src="http://officely.esquall.com/public/assets/media/image/flags/228-russia.png" class="mr-2" alt="flag"> Russian
+                    </a>
+                </div>
+            </li>
+
+            <!-- begin::header search -->
+            <li class="nav-item">
+                <a href="#" class="nav-link" title="Search" data-toggle="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </a>
+                <div class="dropdown-menu p-2 dropdown-menu-right">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-prepend">
+                                <button class="btn" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <!-- end::header search -->
+            <!-- begin::header minimize/maximize -->
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" title="Fullscreen" data-toggle="fullscreen">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+                </a>
+            </li>
+            <!-- end::header minimize/maximize -->
+
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" title="Fullscreen" data-toggle="lock">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- begin::mobile header toggler -->
+        <ul class="navbar-nav d-flex align-items-center">
+            <li class="nav-item header-toggler">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                </a>
+            </li>
+        </ul>
+        <!-- end::mobile header toggler -->
+    </div>
+
+</div>
